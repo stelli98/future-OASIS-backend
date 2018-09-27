@@ -11,6 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-
+${username}
+${fullname}
+${jobTitle}
+${division}
 </body>
 </html>
