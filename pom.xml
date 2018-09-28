@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>oasis</groupId>
+    <groupId>com.example</groupId>
     <artifactId>oasis</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>oasis Maven Webapp</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <name>OASIS</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,18 +17,35 @@
     </properties>
 
     <dependencies>
+        <!--Spring Web MVC Dependency-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>5.1.0.RELEASE</version>
         </dependency>
 
+        <!--Spring MongoDB Data Dependency-->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
             <version>2.1.0.RELEASE</version>
         </dependency>
 
+        <!--Jackson Dependency-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+
+        <!--Spring Security Dependency-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+            <version>3.1.0.RELEASE</version>
+        </dependency>
+
+        <!--JUnit Dependency-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -42,50 +56,16 @@
 
     <repositories>
         <repository>
-        <id>spring-libs-release</id>
-        <name>Spring Releases</name>
-        <url>https://repo.spring.io/libs-release</url>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
+            <id>spring-libs-release</id>
+            <name>Spring Releases</name>
+            <url>https://repo.spring.io/libs-release</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
     <build>
-        <defaultGoal>clean install</defaultGoal>
         <finalName>oasis</finalName>
-        <!--<pluginManagement>&lt;!&ndash; lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) &ndash;&gt;-->
-        <!--<plugins>-->
-        <!--<plugin>-->
-        <!--<artifactId>maven-clean-plugin</artifactId>-->
-        <!--<version>3.0.0</version>-->
-        <!--</plugin>-->
-        <!--&lt;!&ndash; see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging &ndash;&gt;-->
-        <!--<plugin>-->
-        <!--<artifactId>maven-resources-plugin</artifactId>-->
-        <!--<version>3.0.2</version>-->
-        <!--</plugin>-->
-        <!--<plugin>-->
-        <!--<artifactId>maven-compiler-plugin</artifactId>-->
-        <!--<version>3.7.0</version>-->
-        <!--</plugin>-->
-        <!--<plugin>-->
-        <!--<artifactId>maven-surefire-plugin</artifactId>-->
-        <!--<version>2.20.1</version>-->
-        <!--</plugin>-->
-        <!--<plugin>-->
-        <!--<artifactId>maven-war-plugin</artifactId>-->
-        <!--<version>3.2.0</version>-->
-        <!--</plugin>-->
-        <!--<plugin>-->
-        <!--<artifactId>maven-install-plugin</artifactId>-->
-        <!--<version>2.5.2</version>-->
-        <!--</plugin>-->
-        <!--<plugin>-->
-        <!--<artifactId>maven-deploy-plugin</artifactId>-->
-        <!--<version>2.8.2</version>-->
-        <!--</plugin>-->
-        <!--</plugins>-->
-        <!--</pluginManagement>-->
     </build>
 </project>
